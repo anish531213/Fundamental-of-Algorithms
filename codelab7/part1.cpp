@@ -48,6 +48,7 @@ void postorder(Node* root){
     cout  << root->data << " ";
 }
 
+// Breadth first search of the tree
 void BFS_tree(Node* root){
     queue<Node*> myQueue;
     Node* temp;
@@ -64,6 +65,7 @@ void BFS_tree(Node* root){
 
 }
 
+// Helper function fro all_root_to_leaves
 void dfs(Node* n, string s) {
     if (!n->left and !n->right) {
         cout << s << " " << n->data << endl;
@@ -77,6 +79,7 @@ void dfs(Node* n, string s) {
     }
 }
 
+// Helper function for sum paths
 void sumDfs(Node* n, string s, int k) {
     if (!n->left and !n->right) {
         if (k == n->data) 
